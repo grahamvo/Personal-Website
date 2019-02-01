@@ -1,0 +1,12 @@
+#Mac
+.DS_Store
+
+#Front
+node_modules
+*.sass-cache
+tmp
+bundle.js
+npm-debug.log
+yarn-error.log
+build/
+public/js/

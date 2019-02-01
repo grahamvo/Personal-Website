@@ -1,0 +1,28 @@
+{
+  "extends": "stylelint-config-standard",
+  "plugins": [
+      "stylelint-scss"
+  ],
+  "rules": {
+      "indentation": 4,
+      "at-rule-empty-line-before": [ "always", {
+            "except": ["first-nested", "after-same-name"],
+            "ignore": ["after-comment", "inside-block"]
+      } ],
+      "at-rule-no-unknown": [
+            true,
+            "ignoreAtRules": ["include", "extend", "if", "else", "mixin", "content"],
+      ],
+      "declaration-empty-line-before": "never",
+      "color-named": "never",
+      "color-hex-case": "upper",
+      "selector-pseudo-class-no-unknown": [
+            true,
+            "ignorePseudoClasses": ["local", "global", "vertical", "horizontal"]
+      ],
+      "property-no-unknown": [
+            true,
+            "ignoreProperties": ["composes"]
+      ]
+  }
+}

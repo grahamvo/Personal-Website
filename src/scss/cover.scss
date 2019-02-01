@@ -1,0 +1,182 @@
+@import "./main";
+
+.base {
+    width: 100%;
+    height: 100%;
+}
+
+.cover {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    vertical-align: top;
+    display: none;
+    top: 0;
+    left: 0;
+    transition: width 500ms ease-in-out, left 500ms ease-in-out;
+    z-index: 11;
+}
+
+.bioEnter {
+    width: 450px;
+    z-index: 0;
+}
+
+.bioCover {
+    background-color: $mainRed;
+    display: inline-block;
+}
+
+.portfolioEnter {
+    width: 50%;
+    left: 50%;
+    z-index: 0;
+}
+
+.portfolioCover {
+    background-color: $mainGreen;
+    display: inline-block;
+}
+
+.topGroup {
+    position: absolute;
+    left: -75px;
+    top: -75px;
+    transform-origin: top;
+}
+
+.animateTop {
+    animation-name: expand;
+    animation-fill-mode: forwards;
+    animation-direction: alternate;
+    animation-iteration-count: 1;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    z-index: 10;
+}
+
+.animateTopContract {
+    animation-name: contract;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-duration: 700ms;
+    animation-timing-function: ease-in-out;
+    z-index: 10;
+}
+
+.bottomGroup {
+    position: absolute;
+    right: -75px;
+    bottom: -75px;
+    transform-origin: bottom;
+}
+
+.animateBottom {
+    animation-name: expand;
+    animation-fill-mode: forwards;
+    animation-direction: alternate;
+    animation-iteration-count: 1;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    z-index: 10;
+}
+
+.animateBottomContract {
+    animation-name: contract;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-duration: 700ms;
+    animation-timing-function: ease-in-out;
+    z-index: 10;
+}
+
+.topSVG {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.bottomSVG {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+@keyframes expand {
+    11.1% {
+        transform: none;
+    }
+
+    22.2% {
+        transform: scaleX(1.5) scaleY(1.5);
+    }
+
+    33.3% {
+        transform: scaleX(2.25) scaleY(2.25);
+    }
+
+    44.4% {
+        transform: scaleX(3.125) scaleY(3.125);
+    }
+
+    55.5% {
+        transform: scaleX(4.5625) scaleY(4.5625);
+    }
+
+    66.6% {
+        transform: scaleX(5.78125) scaleY(5.78125);
+    }
+
+    77.7% {
+        transform: scaleX(6.390625) scaleY(6.390625);
+    }
+
+    88.8% {
+        transform: scaleX(7.1953125) scaleY(7.1953125);
+    }
+
+    100% {
+        transform: scaleX(8.1953125) scaleY(8.1953125);
+    }
+}
+@keyframes contract {
+    0% {
+        transform: scaleX(8.1953125) scaleY(8.1953125);
+    }
+
+    11.1% {
+        transform: scaleX(8.1953125) scaleY(8.1953125);
+    }
+
+    22.2% {
+        transform: scaleX(7.1953125) scaleY(7.1953125);
+    }
+
+    33.3% {
+        transform: scaleX(6.390625) scaleY(6.390625);
+    }
+
+    44.4% {
+        transform: scaleX(5.78125) scaleY(5.78125);
+    }
+
+    55.5% {
+        transform: scaleX(4.5625) scaleY(4.5625);
+    }
+
+    66.6% {
+        transform: scaleX(3.125) scaleY(3.125);
+    }
+
+    77.7% {
+        transform: scaleX(2.25) scaleY(2.25);
+    }
+
+    88.8% {
+        transform: scaleX(1.5) scaleY(1.5);
+    }
+
+    100% {
+        transform: none;
+    }
+}

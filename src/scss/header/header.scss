@@ -1,0 +1,99 @@
+@import "../main";
+
+.header {
+    opacity: 0;
+    transition: opacity 200ms ease-in-out;
+    transition-delay: 300ms;
+    height: 50px;
+    padding: 0 50px;
+    margin-top: 30px;
+    box-sizing: border-box;
+    position: fixed;
+    width: 100%;
+    z-index: 13;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .name {
+        font-family: $avenirMed;
+        font-size: 20px;
+        letter-spacing: 0.5px;
+        color: $lightBackground;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        text-decoration: none;
+        height: 22px;
+        cursor: pointer;
+    }
+
+    .nameDark {
+        color: $darkGrey;
+    }
+
+    .emptyName {
+        opacity: 0;
+        width: 10px;
+        position: relative;
+    }
+
+    .burger {
+        width: 50px;
+        height: 50px;
+        border-radius: 100px;
+        border: 1px solid $darkGrey;
+        position: relative;
+        box-sizing: border-box;
+        cursor: pointer;
+        transition: border-color 300ms ease-in;
+
+        .arms {
+            width: 25px;
+            height: 16px;
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .arm {
+            width: 25px;
+            height: 2px;
+            background-color: $darkGrey;
+            position: relative;
+            border-radius: 100px;
+            display: block;
+            margin-bottom: 5px;
+            transition: background-color 300ms ease-in;
+        }
+
+        & .arm:nth-of-type(1) {
+            left: 50%;
+            transform: translate(-50%, 0);
+        }
+
+        & .arm:nth-of-type(2) {
+            left: 50%;
+            transform: translate(-50%, 0);
+        }
+
+        & .arm:nth-of-type(3) {
+            left: 50%;
+            transform: translate(-50%, 0);
+            margin-bottom: 0;
+        }
+    }
+
+    .burgerDark {
+        border-color: $lightBackground;
+    }
+
+    .armDark {
+        background-color: $lightBackground !important;
+    }
+}
+
+.show {
+    opacity: 1;
+}

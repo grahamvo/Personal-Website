@@ -1,0 +1,51 @@
+{
+    "parser": "babel-eslint",
+    "extends": ["airbnb"],
+    "plugins": ["react", "import"],
+    "rules": {
+        "indent": ["error", 4],
+        "max-len": ["warn", 100],
+        "no-multi-str": "error",
+        "no-var": "error",
+        "prefer-const": "error",
+        "object-curly-spacing": 1,
+        "no-underscore-dangle": "error",
+        "no-lonely-if": 0,
+        "quote-props": 0,
+        "require-jsdoc": 0,
+        "no-invalid-this": 0,
+        "no-restricted-syntax": 0,
+        "no-bitwise": 0,
+        "function-paren-newline": 0,
+        "import/no-extraneous-dependencies": ["error", {"devDependencies": ["webpack.*.config.js", "**.config.js", "src/js/index.js"]}],
+        "import/no-unresolved": "error",
+        "import/extensions": 0,
+        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+        "react/jsx-indent": [2, 4],
+        "react/forbid-prop-types": [0],
+        "react/jsx-indent-props": [2, 4],
+        "react/jsx-boolean-value": 0,
+        "jsx-a11y/no-static-element-interactions": 0,
+        "jsx-a11y/no-noninteractive-element-interactions": 0,
+        "jsx-a11y/interactive-supports-focus": 0,
+        "jsx-a11y/click-events-have-key-events": 0,
+        "jsx-a11y/anchor-is-valid": 0,
+        "jsx-a11y/label-has-for": 0,
+        "jsx-a11y/href-no-hash": 0
+    },
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es6": true,
+        "node": true,
+        "jest": true
+    },
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    },
+    "settings": {
+        "import/resolver": "webpack"
+    }
+}

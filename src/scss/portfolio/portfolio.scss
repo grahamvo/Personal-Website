@@ -1,0 +1,124 @@
+@import "../main";
+
+.portfolio {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+
+    .dots {
+        position: fixed;
+        width: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 30px;
+
+        .dot {
+            width: 20px;
+            height: 20px;
+            border-radius: 100px;
+            border: 1px solid $mainGreen;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+            cursor: pointer;
+            display: block;
+            background-color: transparent;
+            transition: background-color 200ms ease-in;
+        }
+
+        & .dot:last-of-type() {
+            margin-bottom: 0;
+        }
+
+        .dotActive {
+            background-color: $mainGreen;
+        }
+    }
+
+    .header {
+        position: absolute;
+        display: inline-block;
+        top: 150px;
+        right: calc(50% - 100px);
+        opacity: 0;
+        transition: opacity 300ms ease-in-out, right 300ms ease-in;
+
+        .text {
+            font-family: $avenirMed;
+            font-size: 120px;
+            letter-spacing: 4px;
+            color: $darkGrey;
+            position: relative;
+        }
+
+        .dark {
+            @extend .text;
+            color: $darkGrey;
+            z-index: -1;
+        }
+
+        .light {
+            @extend .text;
+            color: $lightBackground;
+            position: absolute;
+            right: 0;
+        }
+    }
+
+    .headerEnter {
+        right: calc(50% - 150px);
+        opacity: 1;
+        transition-delay: 0ms !important;
+
+        .light {
+            opacity: 1;
+            transition: opacity 300ms ease-out;
+            transition-delay: 200ms;
+        }
+    }
+
+    .headerSlide {
+        right: calc(50% + 20px);
+        opacity: 1;
+        transition-delay: 0ms !important;
+
+        .light {
+            opacity: 0;
+            transition: opacity 300ms ease-out;
+        }
+    }
+
+    .imageContainer {
+        max-width: 630px;
+        height: auto;
+        display: inline-block;
+        position: absolute;
+        top: 350px;
+        left: 150px;
+
+        .image {
+            max-width: inherit;
+            height: auto;
+            box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+        }
+    }
+
+    .infoContainer {
+        width: 50%;
+        right: 0;
+        position: absolute;
+        display: inline-block;
+        vertical-align: top;
+        height: 100%;
+        overflow-y: scroll;
+        opacity: 0;
+        transition: opacity 300ms ease-in-out, transform 300ms ease-in;
+        transition-delay: 200ms;
+        transform: translateX(50px);
+    }
+
+    .infoContainerActive {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

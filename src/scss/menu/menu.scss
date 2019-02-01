@@ -1,0 +1,67 @@
+@import "../main.scss";
+
+.menu {
+    height: 0;
+    top: 0;
+    background-color: $darkGrey;
+    width: 100%;
+    transition: height 400ms ease-in-out;
+    z-index: 12;
+    position: fixed;
+    overflow: hidden;
+
+    .copywrite {
+        font-family: $avenirMed;
+        font-size: 17px;
+        letter-spacing: 0.5px;
+        color: $lightBackground;
+        position: absolute;
+        right: 50px;
+        bottom: 30px;
+        opacity: 0;
+        transition: opacity 300ms ease-in-out;
+    }
+
+    .copywriteActive {
+        opacity: 1;
+    }
+
+    .linkContainer {
+        top: 50%;
+        transform: translateY(-50%);
+        position: relative;
+        left: 250px;
+        opacity: 0;
+        transition: opacity 300ms ease-in;
+        transition-delay: 100ms;
+
+        .link {
+            font-family: $avenirMed;
+            color: $lightBackground;
+            font-size: 40px;
+            letter-spacing: 1px;
+            margin-bottom: 30px;
+            text-decoration: none;
+            display: block;
+            cursor: pointer;
+        }
+
+        .activeLink {
+            color: $mainRed;
+        }
+
+        &:last-of-type() {
+            margin-bottom: 0;
+        }
+    }
+
+    .linkContainerActive {
+        opacity: 1;
+        transition-delay: 0 !important;
+    }
+}
+
+.menuActive {
+    height: 100%;
+    position: fixed;
+}
