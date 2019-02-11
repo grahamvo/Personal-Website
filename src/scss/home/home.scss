@@ -10,7 +10,7 @@
         top: 50%;
         transform: translateY(-50%);
         position: relative;
-        max-width: 900px;
+        max-width: 750px;
         flex-direction: row;
         justify-content: space-between;
 
@@ -22,7 +22,10 @@
 
         .leftCol {
             @extend .col;
-            max-width: 600px;
+            max-width: 550px;
+            opacity: 0;
+            transform: translateX(-200px);
+            transition: opacity 300ms ease-in, transform 300ms ease-in;
 
             .header {
                 font-family: $avenirMed;
@@ -31,16 +34,26 @@
                 color: $darkGrey;
                 margin-bottom: 20px;
                 position: relative;
+
+                @include mq(md) {
+                    font-size: 100px;
+                }
             }
 
             .blurb {
                 font-family: $quattro;
-                font-size: 25px;
+                font-size: 22px;
                 line-height: 41px;
                 letter-spacing: 0.42px;
                 color: $darkGreen;
                 margin-bottom: 50px;
                 position: relative;
+
+                @include mq(md) {
+                    font-size: 19px;
+                    line-height: 38px;
+                    margin-bottom: 40px;
+                }
             }
 
             .divider {
@@ -49,10 +62,22 @@
                 position: relative;
                 background-color: $mainRed;
             }
+
+            @include mq(md) {
+                max-width: 450px;
+            }
+        }
+
+        .leftColEntered {
+            opacity: 1;
+            transform: translateX(0);
         }
 
         .rightCol {
             @extend .col;
+            opacity: 0;
+            transform: translateX(200px);
+            transition: opacity 300ms ease-in, transform 300ms ease-in;
 
             .links {
                 position: relative;
@@ -64,7 +89,7 @@
                 display: block;
                 position: relative;
                 color: $mainRed;
-                margin-bottom: 25px;
+                margin-bottom: 20px;
                 text-decoration: none;
                 height: 30px;
                 cursor: pointer;
@@ -73,13 +98,17 @@
                     color: $mainRed;
                     text-decoration: none;
                     font-family: $avenirBold;
-                    font-size: 20px;
+                    font-size: 18px;
                     letter-spacing: 0.5px;
                     display: inline-block;
                     position: relative;
                     vertical-align: top;
                     transform: translateY(-50%);
                     top: 50%;
+
+                    @include mq(md) {
+                        font-size: 16px;
+                    }
                 }
 
                 .arrow {
@@ -90,6 +119,11 @@
                     transform: translateY(-50%);
                     top: 50%;
                     opacity: 0;
+
+                    @include mq(md) {
+                        height: 20px;
+                        width: 20px;
+                    }
                 }
 
                 &:hover {
@@ -102,11 +136,24 @@
                         animation-fill-mode: forwards;
                     }
                 }
+
+                @include mq(md) {
+                    margin-bottom: 20px;
+                }
             }
 
             & a:last-of-type() {
                 margin-bottom: 0;
             }
+        }
+
+        .rightColEntered {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        @include mq(md) {
+            max-width: 580px;
         }
     }
 }

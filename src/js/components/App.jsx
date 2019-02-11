@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Switch, Route, withRouter } from 'react-router-dom';
-// import ReactSVG from 'react-svg';
 
 // Components
 import Header from 'Components/header/Header';
@@ -13,12 +12,6 @@ import Menu from 'Components/menu/Menu';
 
 // Styles
 import styles from 'SCSS/app.scss';
-
-// Assets
-// import DarkGreen from 'SVG/dark-green.svg';
-// import LightGreen from 'SVG/light-green.svg';
-// import DarkRed from 'SVG/dark-red.svg';
-// import LightRed from 'SVG/light-red.svg';
 
 class App extends Component {
     static propTypes = {
@@ -84,28 +77,6 @@ class App extends Component {
                 />
                 <Menu enter={menu} location={location} handleClick={this.handleClick} />
                 <Cover current={current} next={next} />
-                {/* <div
-                    className={
-                        next === '/portfolio'
-                            ? `${styles.animateTop} ${styles.topGroup}`
-                            : styles.topGroup
-                    }
-                    style={{ display: location.pathname !== '/' ? 'none' : null }}
-                >
-                    <ReactSVG className={styles.topSVG} src={LightGreen} />
-                    <ReactSVG className={styles.topSVG} src={DarkGreen} />
-                </div>
-                <div
-                    className={
-                        next === '/bio'
-                            ? `${styles.animateBottom} ${styles.bottomGroup}`
-                            : styles.bottomGroup
-                    }
-                    style={{ display: location.pathname !== '/' ? 'none' : null }}
-                >
-                    <ReactSVG className={styles.bottomSVG} src={LightRed} />
-                    <ReactSVG className={styles.bottomSVG} src={DarkRed} />
-                </div> */}
                 <Switch>
                     <Route
                         exact

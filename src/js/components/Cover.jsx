@@ -1,17 +1,13 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
-import ReactSVG from 'react-svg';
-// import { Transition } from 'react-transition-group';
 
 // Styles
 import styles from 'SCSS/cover.scss';
 
 // Assets
-import DarkGreen from 'SVG/dark-green.svg';
-import LightGreen from 'SVG/light-green.svg';
-import DarkRed from 'SVG/dark-red.svg';
-import LightRed from 'SVG/light-red.svg';
+import DarkGreen from 'SVG/green.svg';
+import DarkRed from 'SVG/red.svg';
 
 class Cover extends Component {
     static propTypes = {
@@ -143,22 +139,20 @@ class Cover extends Component {
 
         return ([
             <div className={style} key="cover" />,
-            <div
+            <img
                 className={top}
                 style={{ display: current !== '/' ? 'none' : null }}
                 key="topSVG"
-            >
-                <ReactSVG className={styles.topSVG} src={LightGreen} />
-                <ReactSVG className={styles.topSVG} src={DarkGreen} />
-            </div>,
-            <div
+                src={DarkGreen}
+                alt="Green"
+            />,
+            <img
                 className={bottom}
                 style={{ display: current !== '/' ? 'none' : null }}
                 key="bottomSVG"
-            >
-                <ReactSVG className={styles.bottomSVG} src={LightRed} />
-                <ReactSVG className={styles.bottomSVG} src={DarkRed} />
-            </div>,
+                src={DarkRed}
+                alt="Red"
+            />,
         ]);
     }
 }

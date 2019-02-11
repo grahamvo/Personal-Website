@@ -43,51 +43,54 @@
     left: -75px;
     top: -75px;
     transform-origin: top;
+    width: 600px;
+    transition: width 700ms ease-in-out;
+
+    @include mq(md) {
+        width: 500px;
+    }
 }
 
 .animateTop {
-    animation-name: expand;
-    animation-fill-mode: forwards;
-    animation-direction: alternate;
-    animation-iteration-count: 1;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
+    width: 240%;
     z-index: 10;
 }
 
 .animateTopContract {
-    animation-name: contract;
-    animation-fill-mode: forwards;
-    animation-iteration-count: 1;
-    animation-duration: 700ms;
-    animation-timing-function: ease-in-out;
+    width: 600px;
     z-index: 10;
+
+    @include mq(md) {
+        width: 500px;
+    }
 }
 
 .bottomGroup {
     position: absolute;
-    right: -75px;
+    right: -95px;
     bottom: -75px;
     transform-origin: bottom;
+    width: 700px;
+    transition: width 700ms ease-in-out;
+
+    @include mq(md) {
+        width: 600px;
+        right: -75px;
+    }
 }
 
 .animateBottom {
-    animation-name: expand;
-    animation-fill-mode: forwards;
-    animation-direction: alternate;
-    animation-iteration-count: 1;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
+    width: 240%;
     z-index: 10;
 }
 
 .animateBottomContract {
-    animation-name: contract;
-    animation-fill-mode: forwards;
-    animation-iteration-count: 1;
-    animation-duration: 700ms;
-    animation-timing-function: ease-in-out;
+    width: 700px;
     z-index: 10;
+
+    @include mq(md) {
+        width: 600px;
+    }
 }
 
 .topSVG {

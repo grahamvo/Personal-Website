@@ -583,7 +583,7 @@
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/@babel/preset-stage-0/-/preset-stage-0-7.0.0.tgz#999aaec79ee8f0a763042c68c06539c97c6e0646"
 
-"@babel/runtime@^7.1.2", "@babel/runtime@^7.2.0":
+"@babel/runtime@^7.1.2":
   version "7.2.0"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.2.0.tgz#b03e42eeddf5898e00646e4c840fa07ba8dcad7f"
   dependencies:
@@ -749,10 +749,6 @@
 "@sindresorhus/is@^0.7.0":
   version "0.7.0"
   resolved "https://registry.yarnpkg.com/@sindresorhus/is/-/is-0.7.0.tgz#9a06f4f137ee84d7df0460c1fdb1135ffa6c50fd"
-
-"@tanem/svg-injector@^2.1.1":
-  version "2.1.2"
-  resolved "https://registry.yarnpkg.com/@tanem/svg-injector/-/svg-injector-2.1.2.tgz#cf2b0ff4f265b3bfe9ff0afecc82b7e75310cd27"
 
 "@types/q@^1.5.1":
   version "1.5.1"
@@ -6562,14 +6558,6 @@ react-scroll@^1.7.10:
   dependencies:
     lodash.throttle "^4.1.1"
     prop-types "^15.5.8"
-
-react-svg@^7.2.2:
-  version "7.2.2"
-  resolved "https://registry.yarnpkg.com/react-svg/-/react-svg-7.2.2.tgz#cd914c92c3fccedcb06bfdff3cef64cdc2dace21"
-  dependencies:
-    "@babel/runtime" "^7.2.0"
-    "@tanem/svg-injector" "^2.1.1"
-    prop-types "^15.6.2"
 
 react-transition-group@^2.5.2:
   version "2.5.2"
